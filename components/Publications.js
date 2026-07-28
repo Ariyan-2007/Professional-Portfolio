@@ -23,7 +23,13 @@ export default function Publications() {
                 </span>
 
                 <div className="pub__content">
+                  <div className="pub__header">
                   <h3 className="pub__title">{pub.title}</h3>
+
+                  {pub.status === "COMING_SOON" && (
+                      <span className="pub__status">Coming Soon</span>
+                    )}
+                  </div>
 
                   <p className="pub__venue">
                     {pub.venue} · {formatFullDate(pub.date)}
@@ -34,21 +40,21 @@ export default function Publications() {
               </>
             );
 
-            return pub.url ? (
-              <a
-                key={pub.title}
-                href={pub.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="pub pub--link"
-              >
-                {content}
-              </a>
-            ) : (
-              <div className="pub" key={pub.title}>
-                {content}
-              </div>
-            );
+            return pub.status === "PUBLISHED" && pub.url ? (
+            <a
+              key={pub.title}
+              href={pub.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pub pub--link"
+            >
+              {content}
+            </a>
+          ) : (
+            <div className="pub" key={pub.title}>
+              {content}
+            </div>
+          );
           })}
         </div>
       </div>

@@ -3,6 +3,7 @@
     "title": "Blockchain based Agriculture Using the Application of UAV and Deep Learning Technique: AlexNet CNN",
     "venue": "Malaysian Journal of Science and Advanced Technology",
     "date": "2023-05-27",
+    "status": "PUBLISHED",
     "description": "Smart-agriculture research using UAVs and an AlexNet CNN to detect crop diseases in Bangladesh, with blockchain integrated to improve supply-chain management and crop-protection data.",
     "url": "https://www.researchgate.net/publication/372053801_Blockchain_based_Agriculture_Using_the_Application_of_UAV_and_Deep_Learning_Technique_Alexnet_CNN"
   },
@@ -10,7 +11,15 @@
     "title": "Intelligent Software Bug Prediction: An Empirical Approach",
     "venue": "IEEE Xplore",
     "date": "2023-03-21",
+    "status": "PUBLISHED",
     "description": "Compared six ML algorithms and a deep-learning sequential neural network on NASA's PROMISE dataset for software bug prediction. SVM outperformed other models, and feature selection meaningfully improved accuracy.",
     "url": "https://ieeexplore.ieee.org/document/10070026"
+  },
+  {
+    "title": "Data-Driven Forecasting of Heart Failure Readmissions: Balancing Accuracy and Interpretability With Machine Learning",
+    "venue": "IEEE Xplore",
+    "date": "2025-07-06",
+    "status": "COMING_SOON",
+    "description": "Explores interpretable machine learning models for predicting heart failure readmissions while maintaining high predictive accuracy. Evaluates multiple algorithms and explainability techniques to support reliable, data-driven clinical decision making."
   }
 ]
