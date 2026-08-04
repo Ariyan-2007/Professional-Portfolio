@@ -652,6 +652,26 @@ section {
   flex-shrink: 0;
 }
 
+.board__row--current {
+  border-left: 2px solid var(--amber-dim);
+  padding-left: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 179, 0, 0.05) 0%,
+    rgba(255, 179, 0, 0) 140px
+  );
+}
+
+.board__row--current:hover {
+  border-left-color: var(--amber);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 179, 0, 0.07) 0%,
+      rgba(255, 179, 0, 0) 160px
+    ),
+    var(--ink-800);
+}
+
 .board__row--current .board__dot {
   background: var(--status-live);
   box-shadow: 0 0 0 3px var(--amber-soft);
@@ -711,6 +731,216 @@ section {
   }
 
   
+}
+
+/* ============================================================
+   PROMOTION ROW — internal promotion rendered as a climbing
+   flight log instead of a flat bullet list. Same flight code,
+   same row, one continuous journey.
+   ============================================================ */
+
+.board__row--promo {
+  position: relative;
+}
+
+/* Promo rows that aren't the current job (e.g. a past internal
+   promotion) still get the flight-log body, just without the
+   amber rail/wash — those are reserved for whichever row is current. */
+.board__row--promo:not(.board__row--current) {
+  padding-left: 20px;
+}
+
+.board__code--promo {
+  position: relative;
+  overflow: visible;
+}
+
+.board__code-tag {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--ink-900);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px var(--ink-900);
+}
+
+.promo__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 0 0 5px;
+}
+
+/* --- rank insignia: pilot sleeve stripes --- */
+
+.rank {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.rank__bar {
+  height: 3px;
+  border-radius: 1px;
+  background: var(--ink-line);
+}
+
+.rank__bar--filled {
+  background: var(--amber);
+}
+
+/* --- the flight log itself --- */
+
+.flightlog {
+  grid-area: bullets;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flightlog__leg {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 4px 16px;
+}
+
+.flightlog__track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flightlog__node {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+  background: var(--status-done);
+}
+
+.flightlog__node--active {
+  background: var(--status-live);
+  box-shadow: 0 0 0 3px var(--amber-soft);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.flightlog__line {
+  flex: 1;
+  width: 1px;
+  min-height: 36px;
+  margin-top: 4px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--amber-dim) 0 5px,
+    transparent 5px 10px
+  );
+  background-size: 1px 20px;
+  animation: climb 1.4s linear infinite;
+}
+
+@keyframes climb {
+  to {
+    background-position: 0 -20px;
+  }
+}
+
+.flightlog__content {
+  padding-bottom: 22px;
+}
+
+.flightlog__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flightlog__role {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0;
+  color: var(--ink-text);
+}
+
+.flightlog__current {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+  border: 1px solid var(--amber-dim);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.flightlog__dates {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink-muted);
+  margin: 3px 0 8px;
+}
+
+.flightlog__bullets {
+  margin-top: 0;
+}
+
+.flightlog__milestone {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber-dim);
+  background: var(--amber-soft);
+  border: 1px solid var(--amber-dim);
+  border-radius: 999px;
+  padding: 4px 10px;
+  animation: comingSoonGlow 2.4s ease-in-out infinite;
+}
+
+.flightlog__milestone-icon {
+  font-size: 9px;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 880px) {
+  .board__row--current {
+    padding-left: 14px;
+  }
+
+  .board__row--promo:not(.board__row--current) {
+    padding-left: 14px;
+  }
+
+  .flightlog__leg {
+    grid-template-columns: 16px 1fr;
+    gap: 4px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flightlog__line {
+    animation: none;
+  }
+  .flightlog__milestone {
+    animation: none;
+  }
 }
 
 /* ============================================================

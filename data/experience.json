@@ -1,17 +1,35 @@
 [
   {
     "code": "A4A",
-    "role": "Assistant Software Engineer",
     "org": "A4Aero Limited",
     "location": "Dhaka, Bangladesh (Remote)",
     "start": "2024-12",
     "end": null,
     "status": "current",
-    "bullets": [
-      "Led legacy system modernization and end-to-end OTA and airline API integrations across the booking platform.",
-      "Designed scalable APIs and built secure payment processing and authentication systems.",
-      "Delivered full-stack web applications supporting both B2B and B2C travel operations.",
-      "Produced comprehensive API documentation and facilitated partner integrations."
+    "positions": [
+      {
+        "role": "Associate Software Engineer",
+        "start": "2025-03",
+        "end": null,
+        "rank": 3,
+        "bullets": [
+          "Develop distributed microservices with a focus on scalability, maintainability, and reliability.",
+          "Build CI/CD pipelines that automate testing, deployment, and release workflows.",
+          "Improve application performance through automation, optimization, and system monitoring.",
+          "Enhance software delivery by streamlining deployments and engineering best practices."
+        ]
+      },
+      {
+        "role": "Assistant Software Engineer",
+        "start": "2024-12",
+        "end": "2025-02",
+        "rank": 2,
+        "bullets": [
+          "Modernized legacy systems and integrated OTA, GDS, and airline APIs across the platform.",
+          "Designed secure APIs with payment gateway integrations and modern authentication.",
+          "Developed full-stack travel applications and produced partner-facing API documentation."
+        ]
+      }
     ]
   },
   {
