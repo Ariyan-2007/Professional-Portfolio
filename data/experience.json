@@ -41,11 +41,29 @@
     "start": "2024-02",
     "end": "2024-11",
     "status": "past",
-    "bullets": [
-      "Designed and built real-time video streaming systems handling multiple concurrent low-latency streams.",
-      "Integrated hardware-accelerated video processing and OpenCV-based analytics for computer vision.",
-      "Deployed applications on containerized infrastructure for consistent dev-to-production environments.",
-      "Ensured system stability through rigorous testing, debugging, and continuous optimization."
+    "positions": [
+      {
+        "role": "Junior Software Engineer",
+        "start": "2024-05",
+        "end": "2024-11",
+        "rank": 1,
+        "bullets": [
+          "Built real-time video streaming systems supporting multiple concurrent low-latency streams.",
+          "Integrated hardware-accelerated video processing with OpenCV-based analytics.",
+          "Containerized applications and improved reliability through testing and optimization."
+        ]
+      },
+      {
+        "role": "Software Engineer (Trainee)",
+        "start": "2024-02",
+        "end": "2024-05",
+        "rank": 0,
+        "bullets": [
+          "Developed and optimized PyTorch models for computer vision applications.",
+          "Contributed to the AccelEye frontend with WebSocket and analog camera integrations.",
+          "Automated ML workflows and performed API testing and validation."
+        ]
+      }
     ]
   },
   {

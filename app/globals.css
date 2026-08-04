@@ -586,7 +586,7 @@ section {
 
 .board__head {
   display: grid;
-  grid-template-columns: 90px minmax(0, 1fr) 220px 150px 150px;
+  grid-template-columns: 88px minmax(0, 2fr) minmax(160px, 200px) minmax(130px, 170px) 130px;
   gap: 16px;
   padding: 0 22px 12px;
   font-family: var(--font-mono);
@@ -605,9 +605,10 @@ section {
 
 .board__row {
   display: grid;
-  grid-template-columns: 90px minmax(0, 1fr) 220px 150px 150px;
+  grid-template-columns: 88px minmax(0, 2fr) minmax(160px, 200px) minmax(130px, 170px) 130px;
   grid-template-areas:
     "code summary location dates status"
+    "code org org org org"
     ". bullets bullets bullets bullets";
   gap: 16px 24px;
   align-items: start;
@@ -637,21 +638,32 @@ section {
 .board__summary {
   grid-area: summary;
   min-width: 0;
+  max-width: 100%;
 }
 
 .board__role {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 17px;
+  line-height: 1.25;
   margin: 0 0 4px;
   color: var(--ink-text);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  word-break: break-word;
 }
 
 .board__org {
+  grid-area: org;
   font-family: var(--font-mono);
   font-size: 12.5px;
+  line-height: 1.45;
   color: var(--ink-muted);
   margin: 0;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .board__bullets {
@@ -693,6 +705,7 @@ section {
   font-size: 12.5px;
   color: var(--ink-muted);
   padding-top: 2px;
+  white-space: nowrap;
 }
 
 .board__dot {
@@ -761,6 +774,7 @@ section {
     grid-template-columns: 70px 1fr;
     grid-template-areas:
       "code summary"
+      "code org"
       ". location"
       ". dates"
       ". status"
@@ -772,15 +786,28 @@ section {
     min-width: 0;
   }
 
+  .board__role {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .board__location,
+  .board__dates {
+    white-space: normal;
+  }
+
   .board__org {
     margin-top: 4px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   .board__bullets {
     margin-top: 8px;
   }
-
-  
 }
 
 /* ============================================================

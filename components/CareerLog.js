@@ -24,8 +24,9 @@ function StandardRow({ job }) {
 
       <div className="board__summary">
         <h3 className="board__role">{job.role}</h3>
-        <p className="board__org">{job.org}</p>
       </div>
+
+      <p className="board__org">{job.org}</p>
 
       <span className="board__location">{job.location}</span>
 
@@ -67,10 +68,10 @@ function PromotionRow({ job }) {
       </span>
 
       <div className="board__summary">
-        
         <h3 className="board__role">{latest.role}</h3>
-        <p className="board__org">{job.org}</p>
       </div>
+
+      <p className="board__org">{job.org}</p>
 
       <span className="board__location">{job.location}</span>
 
