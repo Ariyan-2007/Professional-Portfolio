@@ -35,7 +35,7 @@ export default function Hero() {
               <div className="pass__route-line" aria-hidden="true" />
               <div className="pass__waypoint pass__waypoint--to">
                 <span className="pass__field-label">Current Role</span>
-                <strong>{current.org}</strong>
+                <strong>{current.role}</strong>
               </div>
             </div>
 
