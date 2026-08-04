@@ -1,3 +1,7 @@
+"use client";
+
+import VisitCounter from "./VisitCounter";
+
 const LINKS = [
   { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
@@ -14,6 +18,7 @@ export default function Nav() {
           <span className="nav__mark-code" aria-hidden="true">AJ</span>
           Ariyan Jahangir
         </a>
+
         <ul className="nav__links">
           {LINKS.map((link) => (
             <li key={link.href}>
@@ -21,7 +26,11 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <a href="#contact" className="nav__cta">Get in touch</a>
+
+        <div className="nav__utility">
+          <VisitCounter />
+          <a href="#contact" className="nav__cta">Get in touch</a>
+        </div>
       </div>
     </header>
   );

@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Fully static output -> pure HTML/CSS/JS, no server needed, fastest possible delivery.
-  output: 'export',
+  // Default (server) output — required for the /api/visit route handler
+  // to run. Vercel deploys this as serverless functions automatically;
+  // everything else on the site still renders to static HTML at build time.
   reactStrictMode: true,
   images: {
-    // Static export can't use the Next.js image optimization API.
-    // If you swap the placeholder for a real <Image>, this keeps it working.
     unoptimized: true,
   },
 };

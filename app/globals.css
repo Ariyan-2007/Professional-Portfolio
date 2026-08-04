@@ -154,7 +154,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  gap: 12px;
+  min-height: 64px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .nav__mark {
@@ -187,6 +190,39 @@ section {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav__utility {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.nav__flight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 179, 0, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 179, 0, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.nav__flight-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.nav__flight-value {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber);
 }
 
 .nav__links a {
@@ -228,6 +264,20 @@ section {
   .nav__links {
     display: none;
   }
+
+  .nav__utility {
+    gap: 8px;
+  }
+
+  .nav__flight {
+    padding: 6px 9px;
+    gap: 8px;
+  }
+
+  .nav__flight-label {
+    display: none;
+  }
+
   .nav__cta {
     padding: 8px 11px;
     font-size: 11px;
