@@ -7,9 +7,9 @@ import Publications from "../components/Publications";
 import Contact from "../components/Contact";
 
 export const metadata = {
-  title: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
+  title: "Ariyan Jahangir | Associate Software Engineer | .NET & C#",
   description:
-    "I build scalable airline platforms, payment integrations, and distributed .NET systems used in production.",
+    "I build scalable platforms, payment integrations, and distributed .NET systems used in production.",
   alternates: {
     canonical: "https://www.ariyan.app",
   },
