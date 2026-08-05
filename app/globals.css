@@ -361,7 +361,27 @@ section {
   font-size: 15.5px;
   color: var(--paper-text);
   max-width: 56ch;
-  margin: 0 0 26px;
+  margin: 0 0 18px;
+}
+
+.pass__quick-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+
+.pass__quick-proof span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(10, 14, 22, 0.06);
+  border: 1px solid rgba(10, 14, 22, 0.14);
+  color: var(--paper-text);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
 }
 
 .pass__route {

@@ -6,6 +6,7 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://ariyanjahangir.dev/sitemap.xml",
+    host: "https://www.ariyan.app",
+    sitemap: "https://www.ariyan.app/sitemap.xml",
   };
 }

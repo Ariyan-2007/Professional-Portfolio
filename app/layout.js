@@ -14,28 +14,32 @@ import "@fontsource/ibm-plex-mono/latin-600.css";
 
 const ogImage = "/images/profile.jpg";
 
-const siteUrl = "https://ariyanjahangir.dev";
+const siteUrl = "https://www.ariyan.app";
 const description =
-  "Ariyan Jahangir is a .NET (C#) software engineer building travel-technology platforms — GDS and NDC airline API integrations (Amadeus, Sabre), scalable backend systems, and applied machine-learning research.";
+  "Ariyan Jahangir is an Associate Software Engineer and .NET/C# developer building scalable airline platforms, OTA integrations, payment gateway systems, and full-stack production software for travel technology teams in Bangladesh.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ariyan Jahangir — Software Engineer",
-    template: "%s — Ariyan Jahangir",
+    default: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
+    template: "%s | Ariyan Jahangir",
   },
   description,
   keywords: [
     "Ariyan Jahangir",
-    "Software Engineer",
+    "Associate Software Engineer",
     ".NET Developer",
     "C# Developer",
-    "Amadeus API",
-    "Sabre API",
-    "NDC integration",
-    "GDS integration",
+    "ASP.NET Core",
+    "Full Stack Developer",
+    "Airline API",
+    "OTA",
+    "Payment Gateway",
+    "Sabre",
+    "Amadeus",
+    "Galileo",
+    "Bangladesh",
     "Travel technology engineer",
-    "Dhaka Bangladesh software engineer",
   ],
   authors: [{ name: profile.name, url: siteUrl }],
   creator: profile.name,
@@ -47,17 +51,11 @@ export const metadata = {
   },
   openGraph: {
     type: "website",
-
     url: siteUrl,
-
     siteName: "Ariyan Jahangir",
-
-    title: "Ariyan Jahangir | Software Engineer",
-
+    title: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
     description,
-
     locale: "en_US",
-
     images: [
       {
         url: ogImage,
@@ -67,19 +65,12 @@ export const metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-
-    creator: "@YOUR_TWITTER",
-
-    title: "Ariyan Jahangir | Software Engineer",
-
+    title: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
     description,
-
     images: [ogImage],
   },
-
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -106,22 +97,33 @@ export default function RootLayout({ children }) {
     sameAs: profile.links.map((l) => l.url),
   };
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: siteUrl,
+    name: "Ariyan Jahangir",
+    description,
+    inLanguage: "en-US",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteUrl}/?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en">
       <body>
         <script
-          // type="application/ld+json"
-          // // eslint-disable-next-line react/no-danger
-          // dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              url: siteUrl,
-              name: "Ariyan Jahangir",
-              description,
-            }),
+            __html: JSON.stringify(personJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
           }}
         />
         {children}
