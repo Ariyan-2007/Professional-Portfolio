@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="pass__main">
             <div className="pass__top">
               <div>
-                <div className="pass__eyebrow">Boarding Pass · Software Engineering</div>
+                <div className="pass__eyebrow">Software Engineer · Aspiring Researcher</div>
               </div>
               <div className="pass__pnr">
                 Record locator

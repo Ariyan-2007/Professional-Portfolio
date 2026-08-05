@@ -139,7 +139,7 @@ export default function CareerLog() {
   return (
     <section id="experience">
       <div className="container">
-        <p className="eyebrow">Departures · Career Log</p>
+        <p className="eyebrow">Career Timeline</p>
         <h2 className="section-title">Experience</h2>
         <p className="section-sub">
           A chronological log of where I&rsquo;ve worked, most recent first.

@@ -427,14 +427,14 @@ section {
   font-size: 13px;
   letter-spacing: 0.04em;
   text-decoration: none;
-  padding: 11px 18px;
+  padding: 12px 18px;
   border-radius: 8px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   border: 1px solid transparent;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn:hover {
@@ -444,11 +444,17 @@ section {
 .btn--primary {
   background: var(--ink-900);
   color: var(--paper);
+  box-shadow: 0 10px 22px -14px rgba(10, 14, 22, 0.9);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 14px 28px -14px rgba(10, 14, 22, 0.95);
 }
 
 .btn--ghost {
   border-color: var(--paper-line);
   color: var(--paper-text);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .pass__stub {
