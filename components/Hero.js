@@ -27,6 +27,13 @@ export default function Hero() {
 
             <p className="pass__summary">{profile.summary}</p>
 
+            <div className="pass__quick-proof" aria-label="Core capabilities">
+              <span>ASP.NET Core</span>
+              <span>C#</span>
+              <span>Airline APIs</span>
+              <span>Payment Gateway</span>
+            </div>
+
             <div className="pass__route">
               <div className="pass__waypoint pass__waypoint--from">
                 <span className="pass__field-label">Origin</span>
@@ -45,6 +52,9 @@ export default function Hero() {
               </a>
               <a className="btn btn--ghost" href={profile.resumeFile} download>
                 Download Resume
+              </a>
+              <a className="btn btn--ghost" href="#contact">
+                Contact
               </a>
             </div>
           </div>
