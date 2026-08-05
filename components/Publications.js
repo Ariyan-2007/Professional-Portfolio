@@ -7,7 +7,7 @@ export default function Publications() {
       <div className="container">
         <p className="eyebrow">Research</p>
 
-        <h2 className="section-title">Publications</h2>
+        <h2 className="section-title">Selected Work</h2>
 
         <p className="section-sub">
           Papers I&rsquo;ve contributed to during university and my professional

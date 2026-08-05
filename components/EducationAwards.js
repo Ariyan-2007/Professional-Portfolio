@@ -6,8 +6,8 @@ export default function EducationAwards() {
   return (
     <section id="education">
       <div className="container">
-        <p className="eyebrow">Ticket Stubs</p>
-        <h2 className="section-title">Education &amp; Awards</h2>
+        <p className="eyebrow">Education &amp; Awards</p>
+        <h2 className="section-title">Credentials</h2>
         <p className="section-sub">Degree and recognitions earned along the way.</p>
 
         <div className="stub-grid">

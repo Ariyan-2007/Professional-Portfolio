@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section id="skills">
       <div className="container">
-        <p className="eyebrow">Manifest</p>
+        <p className="eyebrow">Capabilities</p>
         <h2 className="section-title">Skills</h2>
         <p className="section-sub">
           Tools and practices I reach for, grouped by category.
