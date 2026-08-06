@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "title": "FairSplit",
+    "problem": "Shared electricity bills are often split equally or by average usage, which becomes unfair under progressive tariff systems where higher consumption is charged at higher rates. This leaves low-usage tenants subsidizing heavier consumers and makes the final bill difficult to justify.",
+    "solution": "FairSplit calculates the exact bill using tariff bands and fairly distributes costs based on each sub-meter's usage, while separately accounting for shared consumption. Every tenant receives a transparent, itemized breakdown that exactly matches the utility bill.",
+    "link": "https://fair-split.ariyan.app",
+    "preview": "/images/projects/fairsplit-logo.svg"
+  }
+]

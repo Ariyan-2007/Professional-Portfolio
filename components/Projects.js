@@ -14,17 +14,18 @@ export default function Projects() {
         <div className="projects-grid">
           {projects.map((project) => {
             const content = (
-              <>
-                <div className="project-card__preview">
+              <div className="project-card__body">
+                <div className="project-card__logo">
                   <Image
                     src={project.preview}
                     alt={project.title}
                     fill
+                    sizes="64px"
                     className="project-card__image"
                   />
                 </div>
 
-                <div className="project-card__body">
+                <div className="project-card__details">
                   <h3 className="project-card__title">{project.title}</h3>
 
                   <div className="project-card__row">
@@ -37,7 +38,7 @@ export default function Projects() {
                     <p className="project-card__text">{project.solution}</p>
                   </div>
                 </div>
-              </>
+              </div>
             );
 
             return project.link ? (

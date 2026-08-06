@@ -1337,22 +1337,31 @@ section {
   outline-offset: 3px;
 }
 
-.project-card__preview {
+.project-card__body {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 20px;
+  padding: 22px;
+}
+
+.project-card__logo {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  border: 1px solid var(--ink-line);
+  overflow: hidden;
   background: var(--ink-900);
-  border-bottom: 1px solid var(--ink-line);
 }
 
 .project-card__image {
   object-fit: cover;
 }
 
-.project-card__body {
+.project-card__details {
   display: flex;
   flex-direction: column;
-  padding: 20px 22px 22px;
+  min-width: 0;
 }
 
 .project-card__title {
@@ -1382,6 +1391,17 @@ section {
   font-size: 14px;
   color: #c4cad6;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .project-card__body {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__logo {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 /* ============================================================
