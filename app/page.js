@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import CareerLog from "../components/CareerLog";
 import Skills from "../components/Skills";
 import EducationAwards from "../components/EducationAwards";
+import Projects from "../components/Projects";
 import Publications from "../components/Publications";
 import Contact from "../components/Contact";
 
@@ -24,6 +25,7 @@ export default function Home() {
         <CareerLog />
         <Skills />
         <EducationAwards />
+        <Projects />
         <Publications />
       </main>
       <Contact />
