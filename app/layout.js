@@ -16,28 +16,29 @@ const ogImage = "/images/profile.jpg";
 
 const siteUrl = "https://www.ariyan.app";
 const description =
-  "Ariyan Jahangir is an Associate Software Engineer and .NET/C# developer building scalable airline platforms, OTA integrations, payment gateway systems, and full-stack production software for travel technology teams in Bangladesh.";
+  "Ariyan Jahangir is an Associate Software Engineer building scalable airline platforms, OTA integrations, payment gateway systems, and production software for travel technology teams in Bangladesh.";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
+    default: "Ariyan Jahangir | Associate Software Engineer | .NET & C#",
     template: "%s | Ariyan Jahangir",
   },
   description,
   keywords: [
     "Ariyan Jahangir",
     "Associate Software Engineer",
-    ".NET Developer",
-    "C# Developer",
+    ".NET Software Engineer",
+    "C# Software Engineer",
     "ASP.NET Core",
-    "Full Stack Developer",
     "Airline API",
     "OTA",
     "Payment Gateway",
     "Sabre",
     "Amadeus",
     "Galileo",
+    "Machine Learning",
+    "Microservices",
     "Bangladesh",
     "Travel technology engineer",
   ],
@@ -53,7 +54,7 @@ export const metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Ariyan Jahangir",
-    title: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
+    title: "Ariyan Jahangir | Associate Software Engineer | .NET & C#",
     description,
     locale: "en_US",
     images: [
@@ -67,7 +68,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
+    title: "Ariyan Jahangir | Associate Software Engineer | .NET & C#",
     description,
     images: [ogImage],
   },

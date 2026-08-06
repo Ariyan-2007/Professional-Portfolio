@@ -3,13 +3,14 @@ import Hero from "../components/Hero";
 import CareerLog from "../components/CareerLog";
 import Skills from "../components/Skills";
 import EducationAwards from "../components/EducationAwards";
+import Projects from "../components/Projects";
 import Publications from "../components/Publications";
 import Contact from "../components/Contact";
 
 export const metadata = {
-  title: "Ariyan Jahangir | Associate Software Engineer | .NET & Full Stack Developer",
+  title: "Ariyan Jahangir | Associate Software Engineer | .NET & C#",
   description:
-    "I build scalable airline platforms, payment integrations, and distributed .NET systems used in production.",
+    "I build scalable platforms, payment integrations, and distributed .NET systems used in production.",
   alternates: {
     canonical: "https://www.ariyan.app",
   },
@@ -24,6 +25,7 @@ export default function Home() {
         <CareerLog />
         <Skills />
         <EducationAwards />
+        <Projects />
         <Publications />
       </main>
       <Contact />
