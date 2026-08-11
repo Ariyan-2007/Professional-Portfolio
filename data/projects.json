@@ -5,5 +5,12 @@
     "solution": "FairSplit calculates the exact bill using tariff bands and fairly distributes costs based on each sub-meter's usage, while separately accounting for shared consumption. Every tenant receives a transparent, itemized breakdown that exactly matches the utility bill.",
     "link": "https://fair-split.ariyan.app",
     "preview": "/images/projects/fairsplit-logo.svg"
+  },
+  {
+    "title": "Huddle",
+    "problem": "Group collaboration often requires switching between messaging apps, file-sharing platforms, document editors, and other tools. Students and teams working together on assignments, presentations, research, or projects can quickly end up with fragmented conversations, scattered files, and unnecessary setup.",
+    "solution": "Huddle provides a temporary collaborative workspace where groups can chat, share files, and work together in real time from a single session. Users can quickly start or join a room, invite others, collaborate while they work, and export the conversation when needed without relying on a permanent workspace.",
+    "link": "https://huddle.ariyan.app",
+    "preview": "/images/projects/huddle-logo.svg"
   }
 ]
