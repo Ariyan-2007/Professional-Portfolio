@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Vastora">
+  <defs>
+    <linearGradient id="vastoraBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C6FF2" />
+      <stop offset="0.55" stop-color="#4F3FD1" />
+      <stop offset="1" stop-color="#33279E" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#vastoraBg)" />
+
+  <path
+    d="M16.64 15.36 L24.96 15.36 L32 33.92 L39.04 15.36 L47.36 15.36 L35.52 50.88 L28.48 50.88 Z"
+    fill="#ffffff"
+  />
+</svg>
