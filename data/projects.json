@@ -12,5 +12,12 @@
     "solution": "Huddle provides a temporary collaborative workspace where groups can chat, share files, and work together in real time from a single session. Users can quickly start or join a room, invite others, collaborate while they work, and export the conversation when needed without relying on a permanent workspace.",
     "link": "https://huddle.ariyan.app",
     "preview": "/images/projects/huddle-logo.svg"
+  },
+  {
+  "title": "SuperOffice",
+  "problem": "Managing multiple businesses under one owner often requires switching between separate dashboards, making it difficult to get a unified view of business performance, subscriptions, and operations.",
+  "solution": "SuperOffice provides a centralized control panel for managing multiple businesses under a single Vastora subscription, combining cross-business oversight, analytics, business management, subscription information, and integrations while connecting owners to each business's dedicated BackOffice when deeper operational control is needed.",
+  "link": "https://super-office.ariyan.app",
+  "preview": "/images/projects/superoffice-logo.svg"
   }
 ]
