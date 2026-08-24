@@ -22,8 +22,22 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="pass__name">{profile.name}</h1>
-            <span className="pass__role">{profile.roleLine}</span>
+            <div className="pass__intro">
+              <div className="pass__intro-text">
+                <h1 className="pass__name">{profile.name}</h1>
+                <span className="pass__role">{profile.roleLine}</span>
+              </div>
+              <div className="pass__photo pass__photo--intro" aria-hidden="true">
+                <Image
+                  src="/images/profile.jpg"
+                  alt=""
+                  width={104}
+                  height={139}
+                  className="pass__photo-image"
+                  loading="eager"
+                />
+              </div>
+            </div>
 
             <p className="pass__summary">{profile.summary}</p>
 
@@ -58,14 +72,7 @@ export default function Hero() {
 
           <div className="pass__stub">
             <span className="pass__perf" aria-hidden="true" />
-            {/*
-              PHOTO PLACEHOLDER
-              To add a real photo: drop an image at /public/images/profile.jpg
-              and replace this div with:
-                <Image src="/images/profile.jpg" alt={profile.name} width={400} height={533} style={{borderRadius: 10}} />
-              (import Image from "next/image" at the top of this file)
-            */}
-            <div className="pass__photo">
+            <div className="pass__photo pass__photo--stub">
               <Image
                 src="/images/profile.jpg"
                 alt={profile.name}
@@ -75,8 +82,6 @@ export default function Hero() {
                 loading="eager"
               />
             </div>
-
-
 
             <div className="pass__seat">
               <div className="pass__seat-row">

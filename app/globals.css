@@ -260,27 +260,109 @@ section {
   display: none;
 }
 
+.nav__burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ink-line);
+  border-radius: 10px;
+  background: var(--ink-800);
+  color: var(--ink-text);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nav__panel {
+  display: none;
+  border-top: 1px solid var(--ink-line);
+  background: rgba(10, 14, 22, 0.96);
+  padding: 8px 16px 16px;
+}
+
+.nav__panel-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.nav__panel-link {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid var(--ink-line);
+  border-radius: 10px;
+  background: var(--ink-800);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-text);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.nav__panel-link:active {
+  background: var(--ink-700);
+}
+
+.nav__panel-link--cta {
+  border-color: var(--amber-dim);
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.nav__panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--ink-line);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.nav__panel-visits-value {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--amber);
+}
+
 @media (max-width: 760px) {
   .nav__links {
     display: none;
   }
 
   .nav__utility {
-    gap: 8px;
-  }
-
-  .nav__flight {
-    padding: 6px 9px;
-    gap: 8px;
-  }
-
-  .nav__flight-label {
     display: none;
   }
 
-  .nav__cta {
-    padding: 8px 11px;
-    font-size: 11px;
+  .nav__row {
+    min-height: 56px;
+  }
+
+  .nav__mark {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
+  .nav__panel--open {
+    display: block;
   }
 }
 
@@ -355,6 +437,18 @@ section {
   padding: 5px 10px;
   border-radius: 5px;
   margin-bottom: 22px;
+}
+
+/* On desktop this is just an unstyled wrapper — pass__intro-text renders
+   as it always did, and the mobile-only photo copy stays hidden. Only at
+   the mobile breakpoint does it become a two-column grid that seats the
+   photo beside the name (see @media max-width: 720px below). */
+.pass__intro {
+  display: block;
+}
+
+.pass__photo--intro {
+  display: none;
 }
 
 .pass__summary {
@@ -497,7 +591,7 @@ section {
   overflow: hidden;        /* Add */
   padding: 0;              /* Change from 10px */
 
-  display: flex;
+  display: hidden;
   align-items: stretch;    /* Change */
   justify-content: stretch;/* Change */
 
@@ -575,32 +669,113 @@ section {
   .pass {
     grid-template-columns: 1fr;
   }
+
+  .pass__main {
+    padding: 20px 18px 22px;
+  }
+
+  .pass__top {
+    margin-bottom: 18px;
+  }
+
+  .pass__eyebrow {
+    max-width: 16ch;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .pass__pnr {
+    font-size: 9.5px;
+  }
+
+  .pass__pnr strong {
+    font-size: 15px;
+    margin-top: 2px;
+  }
+
+  /* Photo moves up beside the name instead of being squeezed into the
+     stub row below alongside seat info and the barcode. */
+  .pass__intro {
+    display: grid;
+    grid-template-columns: 1fr 104px;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .pass__intro-text {
+    min-width: 0;
+  }
+
+  .pass__name {
+    font-size: 34px;
+    line-height: 1;
+  }
+
+  .pass__role {
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 6px 9px;
+  }
+
+  .pass__photo--intro {
+    display: flex;
+    width: 104px;
+    flex-shrink: 0;
+  }
+
+  .pass__photo--stub {
+    display: none;
+  }
+
+  .pass__summary {
+    font-size: 15px;
+    margin: 16px 0 14px;
+  }
+
+  .pass__quick-proof span {
+    font-size: 10.5px;
+    padding: 5px 9px;
+  }
+
   .pass__stub {
     border-left: none;
     border-top: 1px dashed var(--paper-line);
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
-    gap: 16px;
+    gap: 0;
+    padding: 16px 18px 18px;
   }
-  .pass__photo {
-    width: 110px;
-    flex-shrink: 0;
-    aspect-ratio: 3/4;
-  }
+
   .pass__seat,
   .pass__barcode {
     margin-top: 0;
+    flex: none;
   }
-  .pass__stub > * {
-    flex: 1;
+
+  .pass__barcode {
+    margin-top: 14px;
+    height: 38px;
   }
+
   .pass__route {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: auto 1fr;
+    gap: 6px 12px;
+    padding: 14px 0;
   }
+
   .pass__route-line {
     display: none;
   }
+
+  .pass__waypoint {
+    display: contents;
+  }
+
+  .pass__waypoint .pass__field-label {
+    padding-top: 4px;
+    margin-bottom: 0;
+  }
+
   .pass__waypoint--to {
     text-align: left;
   }
@@ -645,6 +820,16 @@ section {
 
 .board__row:hover {
   background: var(--ink-800);
+}
+
+/* board__header/board__meta are markup-only wrappers on desktop — they
+   disappear from the box tree so board__code/board__summary and
+   board__location/board__dates/board__status still land in the grid areas
+   below via their own grid-area. Only the mobile breakpoint turns them
+   into real flex rows for the card layout. */
+.board__header,
+.board__meta {
+  display: contents;
 }
 
 .board__code {
@@ -796,43 +981,109 @@ section {
     display: none;
   }
 
+  .board__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Rows become self-contained cards instead of dense grid lines — a
+     header (code chip + title/org), a row of wrapping meta pills, then
+     the bullets or flight log. */
   .board__row {
-    grid-template-columns: 70px 1fr;
-    grid-template-areas:
-      "code summary"
-      "code org"
-      ". location"
-      ". dates"
-      ". status"
-      ". bullets";
-    row-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    border: 1px solid var(--ink-line);
+    border-radius: 14px;
+    background: var(--ink-800);
+    border-bottom: none;
+  }
+
+  .board__row:hover {
+    background: var(--ink-800);
+  }
+
+  .board__row--current {
+    border-left: 1px solid var(--ink-line);
+    padding-left: 16px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 179, 0, 0.06) 0%,
+        rgba(255, 179, 0, 0) 160px
+      ),
+      var(--ink-800);
+  }
+
+  .board__row--current:hover {
+    border-left-color: var(--ink-line);
+  }
+
+  .board__row--promo:not(.board__row--current) {
+    padding-left: 16px;
+  }
+
+  .board__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .board__code {
+    min-width: 52px;
+    height: 34px;
+    padding: 0 8px;
   }
 
   .board__summary {
     min-width: 0;
+    flex: 1;
   }
 
   .board__role {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
-  }
-
-  .board__location,
-  .board__dates {
-    white-space: normal;
+    font-size: 16px;
   }
 
   .board__org {
-    margin-top: 4px;
+    margin-top: 0;
     white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
     hyphens: auto;
   }
 
+  .board__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .board__location,
+  .board__dates,
+  .board__status {
+    white-space: normal;
+    padding: 5px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--ink-line);
+    background: var(--ink-700);
+    font-size: 10.5px;
+  }
+
+  .board__status {
+    letter-spacing: 0.06em;
+  }
+
+  .board__row--current .board__status {
+    border-color: rgba(255, 179, 0, 0.35);
+    background: var(--amber-soft);
+  }
+
   .board__bullets {
-    margin-top: 8px;
+    margin-top: 4px;
   }
 }
 
@@ -1023,14 +1274,6 @@ section {
 }
 
 @media (max-width: 880px) {
-  .board__row--current {
-    padding-left: 14px;
-  }
-
-  .board__row--promo:not(.board__row--current) {
-    padding-left: 14px;
-  }
-
   .flightlog__leg {
     grid-template-columns: 16px 1fr;
     gap: 4px 12px;
@@ -1086,6 +1329,25 @@ section {
   border: 1px solid var(--ink-line);
   padding: 6px 10px;
   border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+  /* Cards become a horizontally swipeable, snapping row instead of a
+     stacked grid — the next card peeks in at the edge as an affordance. */
+  .skills__grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 2px 2px 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .skills__group {
+    flex: 0 0 82%;
+    max-width: 300px;
+    scroll-snap-align: start;
+  }
 }
 
 /* ============================================================
@@ -1461,11 +1723,13 @@ section {
     flex-direction: row;
     overflow-x: auto;
     padding: 2px 2px 6px;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
   .projects-rail__item {
     flex: 0 0 auto;
+    scroll-snap-align: start;
   }
 
   .project-detail {
@@ -1479,6 +1743,13 @@ section {
 
   .project-detail__title {
     font-size: 18px;
+  }
+
+  .project-detail__link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
   }
 }
 
@@ -1518,6 +1789,20 @@ section {
 
 .contact__line a:hover {
   color: var(--amber);
+}
+
+/* Email/phone rows and social links render as plain inline mono text by
+   default — only the mobile breakpoint turns them into tappable cards. */
+.contact__row-icon {
+  display: none;
+}
+
+.contact__social-item {
+  display: inline;
+}
+
+.contact__sep {
+  color: var(--ink-muted);
 }
 
 .contact__refs-title {
@@ -1564,5 +1849,114 @@ section {
   .contact__grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .contact__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 52px;
+    padding: 0 16px;
+    border: 1px solid var(--ink-line);
+    border-radius: 12px;
+    background: var(--ink-700);
+  }
+
+  .contact__row-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .contact__row-icon {
+    display: inline;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+
+  .contact__social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 0;
+  }
+
+  .contact__social-item {
+    display: block;
+  }
+
+  .contact__sep {
+    display: none;
+  }
+
+  .contact__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    border: 1px solid var(--ink-line);
+    border-radius: 12px;
+    background: var(--ink-700);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+/* ============================================================
+   MOBILE STICKY CTA — persistent Email / Resume bar
+   ============================================================ */
+
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: 82px;
+  }
+
+  .mobile-cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    padding: 12px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+    backdrop-filter: blur(14px);
+    background: linear-gradient(
+      180deg,
+      rgba(10, 14, 22, 0) 0%,
+      rgba(10, 14, 22, 0.92) 38%
+    );
+  }
+
+  .mobile-cta__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    border-radius: 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .mobile-cta__btn--primary {
+    background: var(--amber);
+    color: var(--ink-900);
+  }
+
+  .mobile-cta__btn--ghost {
+    border: 1px solid var(--ink-line);
+    background: rgba(18, 25, 39, 0.9);
+    color: var(--ink-text);
   }
 }
