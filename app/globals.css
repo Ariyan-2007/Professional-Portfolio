@@ -1451,6 +1451,37 @@ section {
   margin: 0;
 }
 
+@media (max-width: 700px) {
+  .projects-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects-rail {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 2px 2px 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projects-rail__item {
+    flex: 0 0 auto;
+  }
+
+  .project-detail {
+    padding: 22px;
+  }
+
+  .project-detail__header {
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .project-detail__title {
+    font-size: 18px;
+  }
+}
+
 /* ============================================================
    CONTACT / FOOTER
    ============================================================ */
