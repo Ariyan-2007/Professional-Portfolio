@@ -737,6 +737,12 @@ section {
     padding: 5px 9px;
   }
 
+  /* Email / Resume live in the sticky bottom bar on mobile (.mobile-cta)
+     so they stay reachable while scrolling — no need to repeat them here. */
+  .pass__actions {
+    display: none;
+  }
+
   .pass__stub {
     border-left: none;
     border-top: 1px dashed var(--paper-line);
@@ -1293,13 +1299,18 @@ section {
    SKILLS — luggage tags
    ============================================================ */
 
+/* Flex-wrap rather than a grid so leftover width on any row — including
+   a final row with just one lone card — is distributed among whatever
+   cards are actually on that row, instead of a lone card sitting at a
+   fixed minimum width with empty space beside it. */
 .skills__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 22px;
 }
 
 .skills__group {
+  flex: 1 1 230px;
   background: var(--ink-800);
   border: 1px solid var(--ink-line);
   border-radius: 12px;
@@ -1332,10 +1343,18 @@ section {
 }
 
 @media (max-width: 700px) {
-  /* Cards become a horizontally swipeable, snapping row instead of a
-     stacked grid — the next card peeks in at the edge as an affordance. */
+  /* Horizontally swipeable, snapping columns instead of a stacked grid.
+     The container is capped at roughly the height of the tallest card
+     ("Engineering Practices", measured ~416px at this width) and cards
+     flow column-wise — flex-wrap bin-packs short categories two (or
+     even three) to a column instead of every card being stretched to
+     match the longest one. */
   .skills__grid {
-    display: flex;
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 440px;
     gap: 12px;
     overflow-x: auto;
     padding: 2px 2px 10px;
@@ -1344,10 +1363,17 @@ section {
   }
 
   .skills__group {
-    flex: 0 0 82%;
+    flex: 0 0 auto;
+    width: 82vw;
     max-width: 300px;
     scroll-snap-align: start;
   }
+
+
+.skills__group--fill {
+  grid-column: 3;
+  grid-row: 1 / 4;
+}
 }
 
 /* ============================================================
