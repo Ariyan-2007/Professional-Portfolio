@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Shapla Shoibal">
+  <title>Shapla Shoibal</title>
+
+  <defs>
+    <linearGradient id="shaplashoibal-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2F8F57" />
+      <stop offset="0.6" stop-color="#1B6B3F" />
+      <stop offset="1" stop-color="#0F3E22" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="12" fill="url(#shaplashoibal-bg)" />
+
+  <!-- left: koru fern spiral pair -->
+  <circle cx="23" cy="32" r="16" fill="none" stroke="#F4EEDD" stroke-width="1" opacity="0.25" />
+  <g fill="none" stroke="#F4EEDD" stroke-width="2.4" stroke-linecap="round">
+    <path d="M19,21 C11.5,21 7,26.5 7,32.5 C7,38 11.5,42 17,42 C21,42 24,39 24,35.5 C24,32.5 21.5,30.5 18.8,30.5 C16.8,30.5 15.3,32 15.3,34" />
+    <path d="M27,43 C34.5,43 39,37.5 39,31.5 C39,26 34.5,22 29,22 C25,22 22,25 22,28.5 C22,31.5 24.5,33.5 27.2,33.5 C29.2,33.5 30.7,32 30.7,30" />
+  </g>
+
+  <!-- right: shapla flower over water waves -->
+  <circle cx="43" cy="32" r="16" fill="none" stroke="#F4EEDD" stroke-width="1" opacity="0.25" />
+  <g fill="#F4EEDD">
+    <g transform="translate(43,29)">
+      <path d="M0,0 Q-3.4,-13 0,-17 Q3.4,-13 0,0 Z" transform="rotate(-72)" />
+      <path d="M0,0 Q-3.4,-13 0,-17 Q3.4,-13 0,0 Z" transform="rotate(-48)" />
+      <path d="M0,0 Q-3.4,-13 0,-17 Q3.4,-13 0,0 Z" transform="rotate(-24)" />
+      <path d="M0,0 Q-3.4,-13 0,-17 Q3.4,-13 0,0 Z" />
+      <path d="M0,0 Q-3.4,-13 0,-17 Q3.4,-13 0,0 Z" transform="rotate(24)" />
+      <path d="M0,0 Q-3.4,-13 0,-17 Q3.4,-13 0,0 Z" transform="rotate(48)" />
+      <path d="M0,0 Q-3.4,-13 0,-17 Q3.4,-13 0,0 Z" transform="rotate(72)" />
+    </g>
+  </g>
+  <g fill="none" stroke="#F4EEDD" stroke-width="2" stroke-linecap="round">
+    <path d="M31,38 C34,35 37,41 40,38 C43,35 46,41 49,38" opacity="0.7" />
+    <path d="M31,43.5 C34,40.5 37,46.5 40,43.5 C43,40.5 46,46.5 49,43.5" />
+  </g>
+</svg>

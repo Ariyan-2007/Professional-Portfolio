@@ -24,10 +24,6 @@
     "items": ["Git", "Docker", "Postman"]
   },
   {
-    "category": "Productivity & Office",
-    "items": ["Excel", "Word", "PowerPoint", "Access"]
-  },
-  {
     "category": "Engineering Practices",
     "items": [
       "SDLC",

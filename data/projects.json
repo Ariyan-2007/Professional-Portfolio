@@ -26,5 +26,12 @@
     "solution": "SuperOffice provides a centralized control panel for managing multiple businesses under a single Vastora subscription, combining cross-business oversight, analytics, business management, subscription information, and integrations while connecting owners to each business's dedicated BackOffice when deeper operational control is needed.",
     "link": "https://super-office.ariyan.app",
     "preview": "/images/projects/superoffice-logo.svg"
+  },
+  {
+    "title": "Shapla Shoibal",
+    "problem": "A restaurant owner operating two branches under the same name and offering the same menu needed a convenient way to maintain and present their shared menu without having to manage the same information separately for each location.",
+    "solution": "Shapla Shoibal is a trial project exploring a simple digital menu solution for the restaurant's two locations. It provides a centralized and convenient way to present the same menu online, reducing duplication and making menu information easier for the owner to manage and customers to access.",
+    "link": "https://shapla-shoibal.ariyan.app",
+    "preview": "/images/projects/shaplashoibal-logo.svg"
   }
 ]
