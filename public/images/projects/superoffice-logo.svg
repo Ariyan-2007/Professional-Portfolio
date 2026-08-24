@@ -1,16 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Vastora">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="SuperOffice">
+  <title>SuperOffice</title>
+
   <defs>
-    <linearGradient id="vastoraBg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+    <linearGradient id="superoffice-bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#7C6FF2" />
       <stop offset="0.55" stop-color="#4F3FD1" />
       <stop offset="1" stop-color="#33279E" />
     </linearGradient>
   </defs>
 
-  <rect width="64" height="64" rx="14" fill="url(#vastoraBg)" />
+  <rect width="64" height="64" rx="14" fill="url(#superoffice-bg)" />
 
-  <path
-    d="M16.64 15.36 L24.96 15.36 L32 33.92 L39.04 15.36 L47.36 15.36 L35.52 50.88 L28.48 50.88 Z"
-    fill="#ffffff"
-  />
+  <g stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.55">
+    <line x1="32" y1="23" x2="18" y2="43" />
+    <line x1="32" y1="23" x2="32" y2="47" />
+    <line x1="32" y1="23" x2="46" y2="43" />
+  </g>
+
+  <circle cx="18" cy="44" r="5" fill="#ffffff" fill-opacity="0.6" />
+  <circle cx="46" cy="44" r="5" fill="#ffffff" fill-opacity="0.6" />
+  <circle cx="32" cy="48" r="5" fill="#ffffff" fill-opacity="0.6" />
+  <circle cx="32" cy="21" r="8" fill="#ffffff" />
 </svg>

@@ -1,5 +1,12 @@
 [
   {
+    "title": "Pawtato",
+    "problem": "Pet owners often have no reliable way to help identify and recover a missing pet. Traditional collars and tags may only provide limited information, while people who find a lost animal have no direct way to access the owner's contact details or the pet's current missing status.",
+    "solution": "Pawtato provides a digital pet identification and recovery system built around QR codes. Each pet can have a unique QR code linked to its profile, allowing anyone who finds the pet to scan the code and instantly view its live information and missing status. Owners can manage their pets, update their profiles, and flag a pet as missing so the public-facing page always reflects the latest status.",
+    "link": "https://pawtato.ariyan.app",
+    "preview": "/images/projects/pawtato-logo.svg"
+  },
+  {
     "title": "FairSplit",
     "problem": "Shared electricity bills are often split equally or by average usage, which becomes unfair under progressive tariff systems where higher consumption is charged at higher rates. This leaves low-usage tenants subsidizing heavier consumers and makes the final bill difficult to justify.",
     "solution": "FairSplit calculates the exact bill using tariff bands and fairly distributes costs based on each sub-meter's usage, while separately accounting for shared consumption. Every tenant receives a transparent, itemized breakdown that exactly matches the utility bill.",
@@ -14,10 +21,10 @@
     "preview": "/images/projects/huddle-logo.svg"
   },
   {
-  "title": "SuperOffice",
-  "problem": "Managing multiple businesses under one owner often requires switching between separate dashboards, making it difficult to get a unified view of business performance, subscriptions, and operations.",
-  "solution": "SuperOffice provides a centralized control panel for managing multiple businesses under a single Vastora subscription, combining cross-business oversight, analytics, business management, subscription information, and integrations while connecting owners to each business's dedicated BackOffice when deeper operational control is needed.",
-  "link": "https://super-office.ariyan.app",
-  "preview": "/images/projects/superoffice-logo.svg"
+    "title": "SuperOffice",
+    "problem": "Managing multiple businesses under one owner often requires switching between separate dashboards, making it difficult to get a unified view of business performance, subscriptions, and operations.",
+    "solution": "SuperOffice provides a centralized control panel for managing multiple businesses under a single Vastora subscription, combining cross-business oversight, analytics, business management, subscription information, and integrations while connecting owners to each business's dedicated BackOffice when deeper operational control is needed.",
+    "link": "https://super-office.ariyan.app",
+    "preview": "/images/projects/superoffice-logo.svg"
   }
 ]
