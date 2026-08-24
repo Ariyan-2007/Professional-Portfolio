@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import projects from "../data/projects.json";
+import MediaImage from "./MediaImage";
 
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -34,7 +34,7 @@ export default function Projects() {
                   onClick={() => setActiveIndex(index)}
                 >
                   <span className="projects-rail__logo">
-                    <Image
+                    <MediaImage
                       src={project.preview}
                       alt=""
                       fill
@@ -50,7 +50,7 @@ export default function Projects() {
           <div className="project-detail" key={active.title}>
             <div className="project-detail__header">
               <span className="project-detail__logo">
-                <Image
+                <MediaImage
                   src={active.preview}
                   alt={active.title}
                   fill
