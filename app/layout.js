@@ -1,4 +1,5 @@
 import profile from "../data/profile.json";
+import { resolveMediaUrl } from "../lib/media";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 // Self-hosted font files (via @fontsource): bundled at build time, zero
@@ -12,7 +13,7 @@ import "@fontsource/ibm-plex-mono/latin-400.css";
 import "@fontsource/ibm-plex-mono/latin-500.css";
 import "@fontsource/ibm-plex-mono/latin-600.css";
 
-const ogImage = "/images/profile.jpg";
+const ogImage = resolveMediaUrl("/images/profile.jpg");
 
 const siteUrl = "https://www.ariyan.app";
 const description =
@@ -94,7 +95,7 @@ export default function RootLayout({ children }) {
       addressCountry: "BD",
     },
     url: siteUrl,
-    image: `${siteUrl}/images/profile.jpg`,
+    image: ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`,
     sameAs: profile.links.map((l) => l.url),
   };
 

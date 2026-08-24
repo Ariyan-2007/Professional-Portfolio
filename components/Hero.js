@@ -1,7 +1,8 @@
 import profile from "../data/profile.json";
 import experience from "../data/experience.json";
 import education from "../data/education.json";
-import Image from "next/image";
+import MediaImage from "./MediaImage";
+import MediaLink from "./MediaLink";
 
 export default function Hero() {
   const current = experience.find((e) => e.status === "current") ?? experience[0];
@@ -28,7 +29,7 @@ export default function Hero() {
                 <span className="pass__role">{profile.roleLine}</span>
               </div>
               <div className="pass__photo pass__photo--intro" aria-hidden="true">
-                <Image
+                <MediaImage
                   src="/images/profile.jpg"
                   alt=""
                   width={104}
@@ -64,16 +65,16 @@ export default function Hero() {
               <a className="btn btn--primary" href={`mailto:${profile.email}`}>
                 Email Me
               </a>
-              <a className="btn btn--ghost" href={profile.resumeFile} download>
+              <MediaLink className="btn btn--ghost" href={profile.resumeFile} download>
                 Download Resume
-              </a>
+              </MediaLink>
             </div>
           </div>
 
           <div className="pass__stub">
             <span className="pass__perf" aria-hidden="true" />
             <div className="pass__photo pass__photo--stub">
-              <Image
+              <MediaImage
                 src="/images/profile.jpg"
                 alt={profile.name}
                 width={300}
