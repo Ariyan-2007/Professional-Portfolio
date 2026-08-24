@@ -7,7 +7,7 @@
     </linearGradient>
   </defs>
   <!-- Three people huddled in close, viewed head-on — the app's whole idea in one glyph. -->
-  <rect width="64" height="64" rx="18" fill="url(#g)"/>
+  <rect width="64" height="64" rx="12" fill="url(#g)"/>
   <circle cx="24" cy="26" r="9" fill="#ffffff" fill-opacity="0.55"/>
   <circle cx="40" cy="26" r="9" fill="#ffffff" fill-opacity="0.55"/>
   <circle cx="32" cy="40" r="11" fill="#ffffff"/>
