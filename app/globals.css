@@ -1290,91 +1290,149 @@ section {
    PROJECTS
    ============================================================ */
 
-.projects-grid {
+.projects-layout {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: 88px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
-.project-card {
+.projects-rail {
   display: flex;
   flex-direction: column;
-  background: var(--ink-800);
+  gap: 14px;
+}
+
+.projects-rail__item {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  padding: 0;
   border: 1px solid var(--ink-line);
   border-radius: 12px;
+  background: var(--ink-900);
+  cursor: pointer;
   overflow: hidden;
   transition:
-    background 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease,
     transform 0.15s ease;
 }
 
-.project-card--link {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+.projects-rail__item:hover {
+  border-color: var(--amber-dim);
+  box-shadow: 0 0 0 1px rgba(255, 179, 0, 0.18),
+              0 0 18px rgba(255, 179, 0, 0.25);
+  transform: translateY(-2px);
 }
 
-.project-card--link:hover {
-  background: var(--ink-700);
-  border-color: var(--amber);
-  box-shadow: 0 0 0 1px rgba(255, 193, 7, 0.25),
-              0 12px 30px rgba(0, 0, 0, 0.3);
-  transform: translateY(-3px);
-}
-
-.project-card--link:hover .project-card__title {
-  color: var(--amber);
-}
-
-.project-card--link:active {
-  transform: translateY(0) scale(0.985);
-}
-
-.project-card--link:focus-visible {
+.projects-rail__item:focus-visible {
   outline: 2px solid var(--amber);
   outline-offset: 3px;
 }
 
-.project-card__body {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 20px;
-  padding: 22px;
+.projects-rail__item--active {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 1px rgba(255, 179, 0, 0.3),
+              0 0 20px rgba(255, 179, 0, 0.35);
 }
 
-.project-card__logo {
+.projects-rail__item--active:hover {
+  transform: none;
+}
+
+.projects-rail__logo {
   position: relative;
-  width: 64px;
-  height: 64px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.projects-rail__image {
+  object-fit: cover;
+}
+
+.project-detail {
+  background: var(--ink-800);
+  border: 1px solid var(--ink-line);
   border-radius: 12px;
+  padding: 28px;
+  animation: project-detail-fade 0.25s ease;
+}
+
+@keyframes project-detail-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-detail__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.project-detail__logo {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 10px;
   border: 1px solid var(--ink-line);
   overflow: hidden;
   background: var(--ink-900);
 }
 
-.project-card__image {
+.project-detail__image {
   object-fit: cover;
 }
 
-.project-card__details {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.project-card__title {
+.project-detail__title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 16.5px;
-  margin: 0 0 12px;
+  font-size: 20px;
+  margin: 0;
   color: var(--ink-text);
-  transition: color 0.2s ease;
 }
 
-.project-card__row + .project-card__row {
-  margin-top: 10px;
+.project-detail__row + .project-detail__row {
+  margin-top: 14px;
+}
+
+.project-detail__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--amber);
+  text-decoration: none;
+  border: 1px solid var(--amber-dim);
+  border-radius: 6px;
+  padding: 8px 14px;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.project-detail__link:hover {
+  background: var(--amber-soft);
+  border-color: var(--amber);
+  transform: translateY(-1px);
+}
+
+.project-detail__link:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
 }
 
 .project-card__label {
@@ -1391,17 +1449,6 @@ section {
   font-size: 14px;
   color: #c4cad6;
   margin: 0;
-}
-
-@media (max-width: 600px) {
-  .project-card__body {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card__logo {
-    width: 48px;
-    height: 48px;
-  }
 }
 
 /* ============================================================

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 192 192" fill="none">
+  <!-- ears (flop ears, fused with body silhouette) -->
+  <circle cx="26" cy="84" r="24" fill="#8CA073"/>
+  <circle cx="166" cy="84" r="24" fill="#8CA073"/>
+
+  <!-- body -->
+  <rect x="26" y="34" width="140" height="138" rx="58" fill="#8CA073"/>
+
+  <!-- sprout -->
+  <path d="M96 34 C 94 22, 97 12, 106 6" stroke="#5B7649" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <ellipse cx="110" cy="10" rx="10" ry="6" fill="#AECB8E" transform="rotate(-28 110 10)"/>
+
+  <!-- cheeks -->
+  <ellipse cx="58" cy="118" rx="14" ry="9" fill="#E7B99B" opacity="0.85"/>
+  <ellipse cx="134" cy="118" rx="14" ry="9" fill="#E7B99B" opacity="0.85"/>
+
+  <!-- eyes -->
+  <circle cx="72" cy="96" r="7" fill="#2B241D"/>
+  <circle cx="120" cy="96" r="7" fill="#2B241D"/>
+  <circle cx="74.5" cy="93.5" r="1.8" fill="#F7EEDD"/>
+  <circle cx="122.5" cy="93.5" r="1.8" fill="#F7EEDD"/>
+
+  <!-- nose + mouth -->
+  <path d="M96 104 C 93 104, 91 106, 91 109 C 91 112, 93.5 114, 96 114 C 98.5 114, 101 112, 101 109 C 101 106, 99 104, 96 104 Z" fill="#2B241D"/>
+  <path d="M96 114 L96 118" stroke="#2B241D" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M96 118 C 91 123, 86 123, 83 120" stroke="#2B241D" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <path d="M96 118 C 101 123, 106 123, 109 120" stroke="#2B241D" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+  <!-- beauty mark -->
+  <circle cx="142" cy="108" r="2.4" fill="#5B7649"/>
+</svg>
