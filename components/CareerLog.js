@@ -15,29 +15,39 @@ function RankStripes({ count, total = 3 }) {
   );
 }
 
-function StandardRow({ job }) {
-  const isCurrent = job.status === "current";
-
+function MetaPills({ job, isCurrent }) {
   return (
-    <li className={`board__row ${isCurrent ? "board__row--current" : "board__row--past"}`}>
-      <span className="board__code">{job.code}</span>
-
-      <div className="board__summary">
-        <h3 className="board__role">{job.role}</h3>
-      </div>
-
-      <p className="board__org">{job.org}</p>
-
-      <span className="board__location">{job.location}</span>
+    <div className="board__meta">
+      <span className="board__status">
+        <span className="board__dot" aria-hidden="true" />
+        {isCurrent ? "Active" : "Former Employee"}
+      </span>
 
       <span className="board__dates">
         {formatMonth(job.start)} – {formatMonth(job.end)}
       </span>
 
-      <span className="board__status">
-        <span className="board__dot" aria-hidden="true" />
-        {isCurrent ? "Active" : "Former Employee"}
-      </span>
+      <span className="board__location">{job.location}</span>
+    </div>
+  );
+}
+
+function StandardRow({ job }) {
+  const isCurrent = job.status === "current";
+
+  return (
+    <li className={`board__row ${isCurrent ? "board__row--current" : "board__row--past"}`}>
+      <div className="board__header">
+        <span className="board__code">{job.code}</span>
+
+        <div className="board__summary">
+          <h3 className="board__role">{job.role}</h3>
+        </div>
+      </div>
+
+      <p className="board__org">{job.org}</p>
+
+      <MetaPills job={job} isCurrent={isCurrent} />
 
       <ul className="board__bullets">
         {job.bullets.map((bullet, index) => (
@@ -60,29 +70,22 @@ function PromotionRow({ job }) {
     <li
       className={`board__row board__row--promo ${isCurrent ? "board__row--current" : "board__row--past"}`}
     >
-      <span className="board__code board__code--promo">
-        {job.code}
-        <span className="board__code-tag" title="Internal promotion, same employer">
-          ▲
+      <div className="board__header">
+        <span className="board__code board__code--promo">
+          {job.code}
+          <span className="board__code-tag" title="Internal promotion, same employer">
+            ▲
+          </span>
         </span>
-      </span>
 
-      <div className="board__summary">
-        <h3 className="board__role">{latest.role}</h3>
+        <div className="board__summary">
+          <h3 className="board__role">{latest.role}</h3>
+        </div>
       </div>
 
       <p className="board__org">{job.org}</p>
 
-      <span className="board__location">{job.location}</span>
-
-      <span className="board__dates">
-        {formatMonth(job.start)} – {formatMonth(job.end)}
-      </span>
-
-      <span className="board__status">
-        <span className="board__dot" aria-hidden="true" />
-        {isCurrent ? "Active" : "Former Employee"}
-      </span>
+      <MetaPills job={job} isCurrent={isCurrent} />
 
       <div
         className="flightlog"

@@ -6,6 +6,7 @@ import EducationAwards from "../components/EducationAwards";
 import Projects from "../components/Projects";
 import Publications from "../components/Publications";
 import Contact from "../components/Contact";
+import MobileCTA from "../components/MobileCTA";
 
 export const metadata = {
   title: "Ariyan Jahangir | Associate Software Engineer | .NET & C#",
@@ -29,6 +30,7 @@ export default function Home() {
         <Publications />
       </main>
       <Contact />
+      <MobileCTA />
     </>
   );
 }

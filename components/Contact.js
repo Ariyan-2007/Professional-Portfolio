@@ -12,19 +12,32 @@ export default function Contact() {
             <p className="eyebrow">Contact</p>
             <h2 className="contact__name">Let&rsquo;s talk</h2>
             <p className="contact__line">
-              <a href={`mailto:${profile.email}`}>{profile.email}</a>
+              <a href={`mailto:${profile.email}`} className="contact__row">
+                <span className="contact__row-text">{profile.email}</span>
+                <span className="contact__row-icon" aria-hidden="true">✉</span>
+              </a>
             </p>
             <p className="contact__line">
-              <a href={`tel:${profile.phone}`}>{profile.phone}</a>
+              <a href={`tel:${profile.phone}`} className="contact__row">
+                <span className="contact__row-text">{profile.phone}</span>
+                <span className="contact__row-icon" aria-hidden="true">☎</span>
+              </a>
             </p>
             <p className="contact__line">{profile.location}</p>
-            <p className="contact__line">
+            <p className="contact__line contact__social">
               {profile.links.map((link, i) => (
-                <span key={link.label}>
-                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                <span className="contact__social-item" key={link.label}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact__social-link"
+                  >
                     {link.label}
                   </a>
-                  {i < profile.links.length - 1 ? "  ·  " : ""}
+                  {i < profile.links.length - 1 && (
+                    <span className="contact__sep" aria-hidden="true">  ·  </span>
+                  )}
                 </span>
               ))}
             </p>
